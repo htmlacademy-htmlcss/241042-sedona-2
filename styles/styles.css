@@ -179,6 +179,15 @@ img {
   margin-bottom: -6px;
 }
 
+.logo:hover,
+.logo:focus-visible {
+  opacity: 0.7;
+}
+
+.logo:active {
+  opacity: 0.3;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -214,6 +223,26 @@ img {
   background: #ffffff;
 }
 
+.navigation-link:hover,
+.navigation-link:focus-visible {
+  color: #756157;
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.navigation-link[aria-current="page"] {
+  color: #000000;
+  cursor: default;
+}
+
+.navigation-link[aria-current="page"]:hover,
+.navigation-link[aria-current="page"]:focus-visible,
+.navigation-link[aria-current="page"]:active {
+  color: #000000;
+}
+
 .navigation-link[aria-current="page"]::after {
   content: "";
   position: absolute;
@@ -230,6 +259,15 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
+}
+
+.navigation-user .navigation-link:hover,
+.navigation-user .navigation-link:focus-visible {
+  opacity: 0.7;
+}
+
+.navigation-user .navigation-link:active {
+  opacity: 0.3;
 }
 
 .navigation-link-search {
@@ -269,8 +307,8 @@ img {
   padding-top: 51px;
   padding-bottom: 82px;
   text-align: center;
-  color: white;
-  background-color: #7db54f;
+  color: #ffffff;
+  background-color: #333333;
   background-image:
     url("../images/icons/divider.svg"),
     url("../images/hero/hero-background.jpg");
@@ -290,7 +328,7 @@ img {
 }
 
 .advantages-title {
-  width: 620px;
+  width: 650px;
   margin: 0 auto 25px;
   font-size: 30px;
   line-height: 36px;
@@ -299,7 +337,7 @@ img {
 }
 
 .advantages-description {
-  width: 652px;
+  width: 700px;
   margin: 0 auto 90px;
   font-size: 22px;
   line-height: 26px;
@@ -314,7 +352,7 @@ img {
 }
 
 .advantages-item {
-  padding: 112px 85px;
+  padding: 112px 84px;
   background: rgba(131, 179, 211, 0.12);
 }
 
@@ -472,7 +510,7 @@ img {
   padding-bottom: 104px;
   text-align: center;
   color: #ffffff;
-  background-color: #7db54f;
+  background-color: #333333;
   background-image: url("../images/subscribe/subscribe-background.jpg");
   background-size: cover;
   background-position: center;
@@ -662,7 +700,7 @@ img {
 .inner-header {
   color: #ffffff;
   padding: 35px 70px 70px;
-  background-color: #7db54f;
+  background-color: #333333;
   background-image: url("../images/header/header-background.jpg");
   background-size: cover;
   background-position: center;
@@ -817,7 +855,6 @@ img {
 .control-label {
   font-size: 18px;
   line-height: 23px;
-  word-break: break-all;
   transition: opacity 0.3s ease;
 }
 
@@ -1013,6 +1050,7 @@ img {
 }
 
 .catalog-found {
+  max-width: 360px;
   margin: 0 auto 0 0;
   font-size: 30px;
   font-weight: 700;
